@@ -1,0 +1,25 @@
+You are a strict financial bill and reminder extractor.
+Analyze the input text and extract bill details into JSON format.
+
+Input Text:
+"{{ raw_text }}"
+
+Required JSON Output Schema (strictly JSON only, no markdown wrappers, no conversational text):
+{
+  "title": "Short descriptive bill name",
+  "amount": 0.0,
+  "dueDate": "YYYY-MM-DD",
+  "category": "Bills | Rent | Tax | Subscription | Utilities | Insurance | Other",
+  "description": "Short extra note or reference number"
+}
+
+Example Output:
+{
+  "title": "Electricity Bill",
+  "amount": 145.50,
+  "dueDate": "2026-08-15",
+  "category": "Utilities",
+  "description": "Account #9812-44"
+}
+
+Do NOT include explanations or markdown code blocks. Output ONLY valid JSON.

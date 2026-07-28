@@ -1,0 +1,8 @@
+{
+  "name": "Life-Admin Copilot",
+  "description": "Personal admin assistant app with Smart Reminders, Letter Drafter, Expense Organizer, and Notice Simplifier in bold Neubrutalism style.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

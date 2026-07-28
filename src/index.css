@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-page: #FFF9EC;
+    --accent-yellow: #FFE066;
+    --accent-coral: #FF6B6B;
+    --accent-teal: #4ECDC4;
+    --accent-mint: #A8E6CF;
+    --ink-black: #111111;
+    --text-secondary: #444444;
+    --danger-red: #FF3B3B;
+    --success-green: #2ECC71;
+    --warning-yellow: #FFAA00;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--ink-black);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  * {
+    border-radius: 0px !important; /* Strict 0px radius for Neubrutalism */
+  }
+}
+
+/* Custom Neubrutalist Utilities */
+.nb-card {
+  background-color: #FFFFFF;
+  border: 3px solid #111111;
+  box-shadow: 6px 6px 0 #111111;
+  transition: all 0.1s ease;
+}
+
+.nb-card-sm {
+  background-color: #FFFFFF;
+  border: 3px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+}
+
+.nb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.625rem 1.25rem;
+  border: 3px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  background-color: var(--accent-yellow);
+  color: #111111;
+}
+
+.nb-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #111111;
+}
+
+.nb-btn:active, .nb-btn-pressed {
+  transform: translate(3px, 3px) !important;
+  box-shadow: 1px 1px 0 #111111 !important;
+}
+
+.nb-btn-secondary {
+  background-color: #FFFFFF;
+  color: #111111;
+}
+
+.nb-btn-coral {
+  background-color: var(--accent-coral);
+  color: #111111;
+}
+
+.nb-btn-teal {
+  background-color: var(--accent-teal);
+  color: #111111;
+}
+
+.nb-btn-mint {
+  background-color: var(--accent-mint);
+  color: #111111;
+}
+
+.nb-btn-success {
+  background-color: var(--success-green);
+  color: #FFFFFF;
+}
+
+.nb-btn-danger {
+  background-color: var(--danger-red);
+  color: #FFFFFF;
+}
+
+.nb-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #FFFFFF;
+  border: 3px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #111111;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nb-input:focus {
+  background-color: #FFFFF8;
+  box-shadow: 5px 5px 0 #111111;
+}
+
+.nb-badge {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid #111111;
+  box-shadow: 2px 2px 0 #111111;
+  white-space: nowrap;
+}
+
+/* Striped loading graphic animation for Neubrutalism */
+.nb-loader-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #111111,
+    #111111 15px,
+    #FFE066 15px,
+    #FFE066 30px
+  );
+  background-size: 200% 200%;
+  animation: stripeMove 1.5s linear infinite;
+  border: 3px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+}
+
+@keyframes stripeMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 0; }
+}
+
+/* Custom checkbox */
+.nb-checkbox {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #111111;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  box-shadow: 2px 2px 0 #111111;
+  margin: 0;
+}
+
+.nb-checkbox:checked {
+  background-color: var(--accent-yellow);
+}
+
+.nb-checkbox:checked::before {
+  content: "✔";
+  font-size: 14px;
+  font-weight: 900;
+  color: #111111;
+}

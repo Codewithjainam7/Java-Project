@@ -1,0 +1,27 @@
+You are a precise expense parser.
+Analyze the input text and extract itemized expense items into a JSON array.
+
+Input Text:
+"{{ raw_text }}"
+
+Required JSON Output Schema (strictly JSON array only, no markdown, no explanations):
+[
+  {
+    "title": "Merchant or item name",
+    "amount": 0.0,
+    "category": "Food | Groceries | Travel | Shopping | Medical | Utilities | Other",
+    "date": "YYYY-MM-DD"
+  }
+]
+
+Example Output:
+[
+  {
+    "title": "Whole Foods Groceries",
+    "amount": 42.80,
+    "category": "Groceries",
+    "date": "2026-07-28"
+  }
+]
+
+Do NOT include conversational text or markdown fences. Output ONLY valid JSON array.
